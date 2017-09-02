@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="H_address">
+        <item>인천광역시</item>
+        <item>경기도</item>
+        <item>충청남도</item>
+    </string-array>
+</resources>

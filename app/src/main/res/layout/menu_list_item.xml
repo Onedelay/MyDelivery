@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="3dp"
+    android:id="@+id/menu_list_item">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/menu_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="오리지날 떡볶이"
+            android:layout_weight="5"/>
+
+        <TextView
+            android:id="@+id/menu_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="14000원"
+            android:textStyle="bold"
+            android:layout_weight="3"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/decre_btn"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/minus"/>
+
+        <TextView
+            android:id="@+id/menu_amount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/incre_btn"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/plus"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

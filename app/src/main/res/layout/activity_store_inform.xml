@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hanium.mydelivery.Activity.StoreInformActivity"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_tool_bar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/grocery"/>
+
+        <TextView
+            android:id="@+id/info"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="30dp"
+            android:padding="10dp"
+            android:gravity="center"
+            android:background="@drawable/border"
+            android:text="동대문 엽기 떡볶이
+연수구 송도동 드림시티
+(032) 8xx-xxxx
+Am 11:00~24:00"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bk_border">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="메뉴안내"
+                android:textSize="17sp"
+                android:padding="5dp"
+                android:gravity="center"
+                android:layout_weight="5"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="가격"
+                android:textSize="17sp"
+                android:padding="5dp"
+                android:gravity="center"
+                android:layout_weight="2"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="수량"
+                android:textSize="17sp"
+                android:padding="5dp"
+                android:gravity="center"
+                android:layout_weight="3"/>
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/menu_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/bk_border"
+            android:padding="5dp"
+            android:layout_weight="4"
+            android:layout_marginBottom="4dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="총 결제 금액 : "
+                    android:textSize="20sp"
+                    android:layout_marginLeft="5dp"/>
+
+                <TextView
+                    android:id="@+id/order_total_price"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:textSize="20sp"
+                    android:gravity="right"
+                    android:textStyle="bold"
+                    android:text="24000"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:text="원"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:padding="3dp"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/direct_order"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="바로주문"
+                    android:layout_weight="2"/>
+
+                <Button
+                    android:id="@+id/add2cart"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="장바구니담기"
+                    android:layout_weight="2"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
