@@ -1,13 +1,13 @@
-package com.hanium.mydelivery.Adapter;
+package com.hanium.mydelivery.adapter;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
-import com.hanium.mydelivery.Adapter.holder.ListViewHolder;
-import com.hanium.mydelivery.Listener.OnShopClickListener;
+import com.hanium.mydelivery.adapter.holder.ListViewHolder;
+import com.hanium.mydelivery.listener.OnShopClickListener;
 import com.hanium.mydelivery.R;
-import com.hanium.mydelivery.Data.Shop;
+import com.hanium.mydelivery.data.Shop;
 
 import java.util.ArrayList;
 

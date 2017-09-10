@@ -1,4 +1,4 @@
-package com.hanium.mydelivery.Activity;
+package com.hanium.mydelivery.activity;
 
 import android.content.Intent;
 import android.os.Handler;

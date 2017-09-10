@@ -1,6 +1,6 @@
 package com.hanium.mydelivery.api;
 
-import com.hanium.mydelivery.Data.Shop;
+import com.hanium.mydelivery.data.Shop;
 import com.hanium.mydelivery.api.domain.LoginUserDTO;
 import com.hanium.mydelivery.api.domain.ResponseDTO;
 

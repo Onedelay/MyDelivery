@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.hanium.mydelivery.Activity.LoginActivity"
+    tools:context="com.hanium.mydelivery.activity.LoginActivity"
     android:orientation="vertical">
 
     <include layout="@layout/layout_tool_bar" />
@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:gravity="center">
+        android:paddingTop="100dp">
 
         <LinearLayout
             android:layout_width="match_parent"

@@ -1,4 +1,4 @@
-package com.hanium.mydelivery.Handler;
+package com.hanium.mydelivery.handler;
 
 import android.app.Activity;
 import android.widget.Toast;

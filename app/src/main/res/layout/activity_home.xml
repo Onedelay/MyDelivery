@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.hanium.mydelivery.Activity.HomeActivity">
+    tools:context="com.hanium.mydelivery.activity.HomeActivity">
 
     <include layout="@layout/layout_tool_bar" />
 

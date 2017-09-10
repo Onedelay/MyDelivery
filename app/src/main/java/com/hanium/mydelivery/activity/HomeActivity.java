@@ -1,4 +1,4 @@
-package com.hanium.mydelivery.Activity;
+package com.hanium.mydelivery.activity;
 
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
@@ -7,9 +7,9 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.widget.TextView;
 
-import com.hanium.mydelivery.Handler.BackPressCloseHandler;
+import com.hanium.mydelivery.handler.BackPressCloseHandler;
 import com.hanium.mydelivery.R;
-import com.hanium.mydelivery.Adapter.TabPagerAdapter;
+import com.hanium.mydelivery.adapter.TabPagerAdapter;
 
 public class HomeActivity extends AppCompatActivity{
 

@@ -1,9 +1,9 @@
-package com.hanium.mydelivery.Adapter.holder;
+package com.hanium.mydelivery.adapter.holder;
 
 import android.view.View;
 import android.widget.TextView;
 
-import com.hanium.mydelivery.Data.Item;
+import com.hanium.mydelivery.data.CartItem;
 import com.hanium.mydelivery.R;
 import com.thoughtbot.expandablerecyclerview.viewholders.ChildViewHolder;
 
@@ -23,10 +23,10 @@ public class ItemViewHolder extends ChildViewHolder {
         itemPrice = (TextView) itemView.findViewById(R.id.cart_item_price);
     }
 
-    public void onBind(Item item){
-        itemName.setText(item.getItemName());
-        itemAmount.setText(item.getItemAmount());
-        itemPrice.setText(item.getItemPrice());
+    public void onBind(CartItem cartItem){
+        itemName.setText(cartItem.getItemName());
+        itemAmount.setText(cartItem.getItemAmount());
+        itemPrice.setText(cartItem.getItemPrice());
     }
 
     public void setItemName(String name){

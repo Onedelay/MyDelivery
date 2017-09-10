@@ -1,4 +1,4 @@
-package com.hanium.mydelivery.Data;
+package com.hanium.mydelivery.data;
 
 import android.os.Parcel;
 import android.os.Parcelable;

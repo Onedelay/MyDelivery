@@ -1,4 +1,4 @@
-package com.hanium.mydelivery.Activity;
+package com.hanium.mydelivery.activity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -9,26 +9,31 @@ import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.hanium.mydelivery.Adapter.MenuListRecyclerViewAdapter;
-import com.hanium.mydelivery.Handler.BackPressCloseHandler;
-import com.hanium.mydelivery.Data.Menu;
+import com.hanium.mydelivery.CartEvent;
+import com.hanium.mydelivery.adapter.MenuListRecyclerViewAdapter;
+import com.hanium.mydelivery.data.CartItem;
+import com.hanium.mydelivery.data.Menu;
 import com.hanium.mydelivery.R;
-import com.hanium.mydelivery.Data.Shop;
+import com.hanium.mydelivery.data.Shop;
 import com.hanium.mydelivery.TestData;
 
 import java.util.ArrayList;
 
-public class StoreInformActivity extends AppCompatActivity {
+public class StoreInformActivity extends AppCompatActivity implements CartEvent{
     private Shop shop;
 
     private RecyclerView recyclerView;
     private MenuListRecyclerViewAdapter mAdapter;
-    private ArrayList<Menu> data;
+    private ArrayList<CartItem> data;
+    private int storeTotalPrice;
+
+    private TextView menuAllPrice;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +44,8 @@ public class StoreInformActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         TextView textTitle = (TextView)toolbar.findViewById(R.id.text_title);
         textTitle.setText("My Delivery - 업체정보");
+
+        menuAllPrice = (TextView) findViewById(R.id.order_total_price);
 
         setSupportActionBar(toolbar);
 
@@ -53,18 +60,20 @@ public class StoreInformActivity extends AppCompatActivity {
         TestData testData = new TestData();
 
         for(int i=0; i<testData.menuCnt; i++){
-            Menu menu = new Menu();
-            menu.setMenu(testData.T_Menus[i]);
-            menu.setPrice(testData.T_Prices[i]);
-            data.add(menu);
+            CartItem cartItem = new CartItem();
+            cartItem.setItemName(testData.T_Menus[i]);
+            cartItem.setItemPrice(testData.T_Prices[i]);
+
+            data.add(cartItem);
         }
+
 
         recyclerView = (RecyclerView) findViewById(R.id.menu_list);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setHasFixedSize(true);
         recyclerView.addItemDecoration(new DividerItemDecoration(StoreInformActivity.this, DividerItemDecoration.VERTICAL)); // division line
 
-        mAdapter = new MenuListRecyclerViewAdapter();
+        mAdapter = new MenuListRecyclerViewAdapter(this);
         mAdapter.setData(data);
         recyclerView.setAdapter(mAdapter);
 
@@ -85,6 +94,8 @@ public class StoreInformActivity extends AppCompatActivity {
         });
 
         }
+
+
 
         void alertShow(){
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -108,4 +119,17 @@ public class StoreInformActivity extends AppCompatActivity {
             builder.show();
         }
 
+    @Override
+    public void addToCart(int index) {
+        Log.i("HTJ", data.get(index).getItemAmount() + "");
+        storeTotalPrice += data.get(index).getItemPrice();
+        menuAllPrice.setText(storeTotalPrice + "");
+    }
+
+    @Override
+    public void removeToCart(int index) {
+        Log.i("HTJ", data.get(index).getItemAmount() + "");
+        storeTotalPrice -= data.get(index).getItemPrice();
+        menuAllPrice.setText(storeTotalPrice + "");
+    }
 }

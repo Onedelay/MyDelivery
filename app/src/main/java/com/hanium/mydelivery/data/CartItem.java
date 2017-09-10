@@ -1,4 +1,4 @@
-package com.hanium.mydelivery.Data;
+package com.hanium.mydelivery.data;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -7,30 +7,30 @@ import android.os.Parcelable;
  * Created by su_me on 2017-08-05.
  */
 
-public class Item implements Parcelable {
+public class CartItem implements Parcelable {
     String itemName;
     int itemAmount;
     int itemPrice;
 
-    public Item(){
+    public CartItem(){
 
     }
 
-    protected Item(Parcel in){
+    protected CartItem(Parcel in){
         itemName = in.readString();
         itemAmount = in.readInt();
         itemPrice = in.readInt();
     }
 
-    public static final Creator<Item> CREATOR = new Creator<Item>() {
+    public static final Creator<CartItem> CREATOR = new Creator<CartItem>() {
         @Override
-        public Item createFromParcel(Parcel source) {
-            return new Item(source);
+        public CartItem createFromParcel(Parcel source) {
+            return new CartItem(source);
         }
 
         @Override
-        public Item[] newArray(int size) {
-            return new Item[size];
+        public CartItem[] newArray(int size) {
+            return new CartItem[size];
         }
     };
 

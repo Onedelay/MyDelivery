@@ -1,10 +1,10 @@
-package com.hanium.mydelivery.Adapter;
+package com.hanium.mydelivery.adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import com.hanium.mydelivery.Data.Shop;
+import com.hanium.mydelivery.data.Shop;
 import com.hanium.mydelivery.fragment.ListFragment;
 
 /**
@@ -43,4 +43,11 @@ public class TabPagerAdapter extends FragmentStatePagerAdapter {
         return tabCount;
     }
 
+    /**
+     * Created by su_me on 2017-09-10.
+     */
+
+    public static class CartInterface {
+
+    }
 }

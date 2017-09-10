@@ -12,11 +12,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.hanium.mydelivery.Activity.StoreInformActivity;
-import com.hanium.mydelivery.Adapter.ListRecyclerViewAdapter;
-import com.hanium.mydelivery.Listener.OnShopClickListener;
+import com.hanium.mydelivery.activity.StoreInformActivity;
+import com.hanium.mydelivery.adapter.ListRecyclerViewAdapter;
+import com.hanium.mydelivery.listener.OnShopClickListener;
 import com.hanium.mydelivery.R;
-import com.hanium.mydelivery.Data.Shop;
+import com.hanium.mydelivery.data.Shop;
 import com.hanium.mydelivery.TestData;
 import com.hanium.mydelivery.util.RetrofitHelper;
 

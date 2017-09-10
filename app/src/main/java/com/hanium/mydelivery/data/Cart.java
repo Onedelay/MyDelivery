@@ -1,26 +1,20 @@
-package com.hanium.mydelivery.Data;
+package com.hanium.mydelivery.data;
 
-import android.os.Parcel;
 import android.os.Parcelable;
 
 import com.thoughtbot.expandablerecyclerview.models.ExpandableGroup;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by su_me on 2017-08-05.
  */
 
-public class Cart extends ExpandableGroup<Item> implements Parcelable {
+public class Cart {
     private String storeName;
     private int totalPrice;
-
-    public Cart(String storeName, List<Item> items){
-        super(storeName, items);
-    }
-
-
-
+    private ArrayList<CartItem> items;
 
     public String getStoreName() {
         return storeName;

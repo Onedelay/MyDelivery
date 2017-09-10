@@ -1,4 +1,4 @@
-package com.hanium.mydelivery.Adapter.holder;
+package com.hanium.mydelivery.adapter.holder;
 
 import android.view.View;
 import android.widget.TextView;

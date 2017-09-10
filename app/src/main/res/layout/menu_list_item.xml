@@ -1,55 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="3dp"
+    android:padding="10dp"
     android:id="@+id/menu_list_item">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp">
 
         <TextView
             android:id="@+id/menu_name"
-            android:layout_width="0dp"
+            android:layout_width="130dp"
             android:layout_height="wrap_content"
             android:text="오리지날 떡볶이"
-            android:layout_weight="5"/>
+            app:layout_constraintLeft_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/menu_price"
+            app:layout_constraintRight_toRightOf="@+id/menu_price"/>
 
         <TextView
             android:id="@+id/menu_price"
-            android:layout_width="0dp"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:text="14000원"
             android:textStyle="bold"
-            android:layout_weight="3"
-            android:gravity="center"/>
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="@id/menu_name"
+            app:layout_constraintLeft_toRightOf="@id/menu_name"
+            app:layout_constraintRight_toLeftOf="@+id/decre_btn"/>
 
         <Button
             android:id="@+id/decre_btn"
-            android:layout_width="0dp"
+            android:layout_width="20dp"
             android:layout_height="20dp"
-            android:layout_weight="1"
-            android:background="@drawable/minus"/>
+            android:background="@drawable/minus"
+            app:layout_constraintTop_toTopOf="@id/menu_name"
+            app:layout_constraintLeft_toRightOf="@id/menu_price"
+            app:layout_constraintRight_toRightOf="@+id/menu_amount"/>
 
         <TextView
             android:id="@+id/menu_amount"
-            android:layout_width="0dp"
+            android:layout_width="15dp"
             android:layout_height="wrap_content"
             android:text="0"
-            android:layout_weight="1"
-            android:gravity="center"/>
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="@id/menu_name"
+            app:layout_constraintLeft_toRightOf="@id/decre_btn"
+            app:layout_constraintRight_toLeftOf="@+id/incre_btn"/>
 
         <Button
             android:id="@+id/incre_btn"
-            android:layout_width="0dp"
+            android:layout_width="20dp"
             android:layout_height="20dp"
-            android:layout_weight="1"
-            android:background="@drawable/plus"/>
+            android:background="@drawable/plus"
+            app:layout_constraintTop_toTopOf="@id/menu_name"
+            app:layout_constraintLeft_toRightOf="@id/menu_amount"
+            app:layout_constraintRight_toRightOf="parent"/>
 
-
-    </LinearLayout>
-
-</LinearLayout>
+</android.support.constraint.ConstraintLayout>

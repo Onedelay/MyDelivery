@@ -1,12 +1,12 @@
-package com.hanium.mydelivery.Adapter;
+package com.hanium.mydelivery.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.hanium.mydelivery.Data.Item;
-import com.hanium.mydelivery.Adapter.holder.CartViewHolder;
-import com.hanium.mydelivery.Adapter.holder.ItemViewHolder;
+import com.hanium.mydelivery.data.CartItem;
+import com.hanium.mydelivery.adapter.holder.CartViewHolder;
+import com.hanium.mydelivery.adapter.holder.ItemViewHolder;
 import com.hanium.mydelivery.R;
 import com.thoughtbot.expandablerecyclerview.ExpandableRecyclerViewAdapter;
 import com.thoughtbot.expandablerecyclerview.models.ExpandableGroup;
@@ -37,8 +37,8 @@ public class CartAdapter extends ExpandableRecyclerViewAdapter<CartViewHolder, I
 
     @Override
     public void onBindChildViewHolder(ItemViewHolder holder, int platPosition, ExpandableGroup group, int childIndex) {
-        final Item item = (Item)((group).getItems().get(childIndex));
-        holder.onBind(item);
+        final CartItem cartItem = (CartItem)((group).getItems().get(childIndex));
+        holder.onBind(cartItem);
     }
 
     @Override

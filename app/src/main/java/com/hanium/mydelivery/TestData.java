@@ -1,9 +1,5 @@
 package com.hanium.mydelivery;
 
-import com.hanium.mydelivery.Data.Cart;
-
-import java.util.List;
-
 /**
  * Created by su_me on 2017-07-30.
  */

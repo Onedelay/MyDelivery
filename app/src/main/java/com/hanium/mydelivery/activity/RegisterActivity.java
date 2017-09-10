@@ -1,4 +1,4 @@
-package com.hanium.mydelivery.Activity;
+package com.hanium.mydelivery.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

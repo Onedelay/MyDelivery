@@ -1,11 +1,10 @@
-package com.hanium.mydelivery.Adapter.holder;
+package com.hanium.mydelivery.adapter.holder;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
-import com.hanium.mydelivery.Data.Cart;
+import com.hanium.mydelivery.data.Cart;
 
 /**
  * Created by su_me on 2017-08-05.

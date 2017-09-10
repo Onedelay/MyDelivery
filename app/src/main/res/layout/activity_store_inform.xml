@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.hanium.mydelivery.Activity.StoreInformActivity"
+    tools:context="com.hanium.mydelivery.activity.StoreInformActivity"
     android:orientation="vertical">
 
     <include layout="@layout/layout_tool_bar"/>
@@ -112,7 +112,7 @@ Am 11:00~24:00"/>
                     android:textSize="20sp"
                     android:gravity="right"
                     android:textStyle="bold"
-                    android:text="24000"/>
+                    android:text="0"/>
 
                 <TextView
                     android:layout_width="wrap_content"
