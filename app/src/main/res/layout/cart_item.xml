@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:background="@drawable/bk_border">
+
+    <CheckBox
+        android:id="@+id/cart_item_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/restau_name"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="동대문 엽기 떡볶이(식당명)"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toRightOf="@+id/cart_item_check"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/cart_item_list"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/restau_name"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:padding="5dp"
+        android:layout_marginLeft="10dp">
+    </android.support.v7.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="합계 : 38000 원"
+        android:textSize="20sp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/cart_item_list"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/change"/>
+
+    <Button
+        android:id="@+id/change"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="수정"
+        app:layout_constraintLeft_toRightOf="@id/total"
+        app:layout_constraintTop_toBottomOf="@id/cart_item_list"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/delete"/>
+
+    <Button
+        android:id="@+id/delete"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="삭제"
+        app:layout_constraintLeft_toRightOf="@id/change"
+        app:layout_constraintTop_toBottomOf="@id/cart_item_list"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+</android.support.constraint.ConstraintLayout>

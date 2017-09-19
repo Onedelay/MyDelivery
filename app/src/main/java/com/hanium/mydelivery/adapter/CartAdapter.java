@@ -31,7 +31,7 @@ public class CartAdapter extends ExpandableRecyclerViewAdapter<CartViewHolder, I
 
     @Override
     public ItemViewHolder onCreateChildViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.cart_child_item, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.cart_item, parent, false);
         return new ItemViewHolder(view);
     }
 
