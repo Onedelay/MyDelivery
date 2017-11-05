@@ -2,7 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.hanium.mydelivery">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.LoginActivity"></activity>
+        <activity android:name=".activity.LoginActivity" />
         <activity android:name=".activity.HomeActivity" />
         <activity android:name=".activity.StoreInformActivity" />
         <activity android:name=".activity.RegisterActivity" />
@@ -21,7 +22,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.CartActivity"></activity>
+        <activity android:name=".activity.CartActivity" />
+        <activity android:name=".activity.LoginTestActivity"></activity>
     </application>
 
 </manifest>

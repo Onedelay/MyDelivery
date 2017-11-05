@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.hanium.mydelivery.activity.LoginTestActivity"
+    android:gravity="center">
+
+    <Button
+        android:id="@+id/image_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="select"/>
+
+    <ImageView
+        android:id="@+id/sign_image"
+        android:src="@mipmap/ic_launcher"
+        android:layout_width="200dp"
+        android:layout_height="200dp" />
+
+    <TextView
+        android:id="@+id/sign_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="sign.jpg"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:id="@+id/sign_id"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint="input ID"/>
+
+    <Button
+        android:id="@+id/sign_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="login"/>
+
+</LinearLayout>

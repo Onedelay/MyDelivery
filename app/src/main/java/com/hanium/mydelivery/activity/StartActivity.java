@@ -15,13 +15,13 @@ public class StartActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
 
-        Handler handler = new Handler(){
-            public void handleMessage(Message message){
-                super.handleMessage(message);
-                startActivity(new Intent(StartActivity.this, LoginActivity.class));
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+//                startActivity(new Intent(StartActivity.this, LoginActivity.class));
+                startActivity(new Intent(StartActivity.this, LoginTestActivity.class));
                 finish();
             }
-        };
-        handler.sendEmptyMessageDelayed(0, 3000);
+        }, 2000);
     }
 }
