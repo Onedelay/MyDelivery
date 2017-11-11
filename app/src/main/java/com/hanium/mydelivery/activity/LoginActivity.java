@@ -71,6 +71,15 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        Button imageLoginBtn = (Button) findViewById(R.id.image_login);
+        imageLoginBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this, LoginTestActivity.class);
+                startActivity(intent);
+            }
+        });
+
         Button register_btn = (Button) findViewById(R.id.register);
         register_btn.setOnClickListener(new View.OnClickListener() {
             @Override

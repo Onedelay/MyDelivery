@@ -101,6 +101,13 @@
 
         </LinearLayout>
 
+        <Button
+            android:id="@+id/image_login"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="이미지 로그인"
+            android:layout_gravity="center"/>
+
     </LinearLayout>
 
 </LinearLayout>

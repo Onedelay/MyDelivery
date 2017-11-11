@@ -1,5 +1,6 @@
 package com.hanium.mydelivery.util;
 
+import com.hanium.mydelivery.api.domain.ImageLoginUserDTO;
 import com.hanium.mydelivery.data.Shop;
 import com.hanium.mydelivery.api.RetrofitService;
 import com.hanium.mydelivery.api.domain.LoginUserDTO;
@@ -42,5 +43,9 @@ public class RetrofitHelper {
 
     public void getRstrList(Callback<ArrayList<Shop>> callback, int type){
         retrofitService.getRstrList(type).enqueue(callback);
+    }
+
+    public void requestImageLogin(ImageLoginUserDTO dto, Callback<ResponseDTO> callback) {
+        retrofitService.imageLoginUser(dto).enqueue(callback);
     }
 }

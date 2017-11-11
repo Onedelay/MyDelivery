@@ -1,5 +1,6 @@
 package com.hanium.mydelivery.api;
 
+import com.hanium.mydelivery.api.domain.ImageLoginUserDTO;
 import com.hanium.mydelivery.data.Shop;
 import com.hanium.mydelivery.api.domain.LoginUserDTO;
 import com.hanium.mydelivery.api.domain.ResponseDTO;
@@ -22,4 +23,7 @@ public interface RetrofitService {
 
     @GET("rstr/list")
     Call<ArrayList<Shop>> getRstrList(@Query("type") int type);
+
+    @POST("user/imageLogin")
+    Call<ResponseDTO> imageLoginUser(@Body ImageLoginUserDTO imageLoginUserDTO);
 }

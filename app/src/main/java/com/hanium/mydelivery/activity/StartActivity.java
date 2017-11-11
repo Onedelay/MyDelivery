@@ -19,7 +19,7 @@ public class StartActivity extends AppCompatActivity {
             @Override
             public void run() {
 //                startActivity(new Intent(StartActivity.this, LoginActivity.class));
-                startActivity(new Intent(StartActivity.this, LoginTestActivity.class));
+                startActivity(new Intent(StartActivity.this, LoginActivity.class));
                 finish();
             }
         }, 2000);
